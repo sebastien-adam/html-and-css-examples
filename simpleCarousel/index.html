@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A simple carousel example with lightbox</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class=lightbox role=dialog aria-modal=true aria-live=polite>
+        <div class=wrapper>
+        <button class="buttons flex button-close" aria-label=close>&times;
+        </button>
+        <div class=img><img src=images/image-01-1920w.webp alt="light box image"></div>
+        </div>
+        </div>
+    <main>
+        <div class=carousel-wrapper>
+            <div class="carousel-items img-clk">
+                <div class=carousel-item>
+                    <picture>
+                        <source type=image/webp
+                            srcset="images/image-01-800w.webp 800w, images/image-01-1200w.webp 1200w"
+                            sizes="(max-width: 1800px) 800px, 1200px">
+                        <img class=img-round src=images/image-01-1920w.webp alt="image alt" loading=lazy decoding=async>
+                    </picture>
+                </div>
+                <div class=carousel-item>
+                    <picture>
+                        <source type=image/webp
+                            srcset="images/image-02-800w.webp 800w, images/image-02-1200w.webp 1200w"
+                            sizes="(max-width: 1800px) 800px, 1200px">
+                        <img class=img-round src=images/image-02-1920w.webp alt="image alt" loading=lazy decoding=async>
+                    </picture>
+                </div>
+                <div class=carousel-item>
+                    <picture>
+                        <source type=image/webp
+                            srcset="images/image-03-800w.webp 800w, images/image-03-1200w.webp 1200w"
+                            sizes="(max-width: 1800px) 800px, 1200px">
+                        <img class=img-round src=images/image-03-1920w.webp alt="image alt" loading=lazy decoding=async>
+                    </picture>
+                </div>
+                <div class=carousel-item>
+                    <picture>
+                        <source type=image/webp
+                            srcset="images/image-04-800w.webp 800w, images/image-04-1200w.webp 1200w"
+                            sizes="(max-width: 1800px) 800px, 1200px">
+                        <img class=img-round src=images/image-04-1920w.webp alt="image alt" loading=lazy decoding=async>
+                    </picture>
+                </div>
+                <div class=carousel-item>
+                    <picture>
+                        <source type=image/webp
+                            srcset="images/image-05-800w.webp 800w, images/image-05-1200w.webp 1200w"
+                            sizes="(max-width: 1800px) 800px, 1200px">
+                        <img class=img-round src=images/image-05-1920w.webp alt="image alt" loading=lazy decoding=async>
+                    </picture>
+                </div>
+                
+                <div class=control>
+                    <div class=prev>&lt;
+                    </div>
+                    <div class=next>&gt;
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./image.js"></script>
+</body>
+
+</html>
